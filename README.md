@@ -10,7 +10,19 @@ Este proyecto realizado en C++ es un generador de laberintos aleatorios que adem
 
 - **Visualización Gráfica:** La función `buscar_camino()` muestra en la consola el laberinto con la solución resaltada.
 
-Algoritmo Utilizado
+Algoritmo de Generación del Laberinto:
+
+El proyecto utiliza un algoritmo de generación aleatoria de un laberinto. La matriz que representa el laberinto posee en total 5 valores distintos, valores que van de 0 a 4. 
+- El "0" representa un espacio vacio.
+- El "1" representa el bloque de una pared.
+- El "2" representa la entrada.
+- El "3" representa la salida.
+- El "4" representa un bloque perteneciente al camino de entrada a la salida (el de la solución).
+
+Inicialmente, el laberinto se encuentra completamente vacio (solo posee paredes a los costados, arriba y abajo, que delimitan el laberinto como tal) . Posterior a ello, el algoritmo se encarga de escoger numeros aleatorios que se encuentran dentro de las paredes principales del  laberinto, y lo transforman a numeros pares, transformándolos luego a bloques ( adquieren un valor 1), luego se escoge una de las 4 opciones posibles alrededor del mismo punto, y si este representa un espacio vacio, lo transforma en un bloque, asi como tambien el punto medio de entre esos dos puntos mencionados anteriormente.
+  
+
+Algoritmo de Solución:
 
 El proyecto utiliza un algoritmo de búsqueda recursiva para encontrar un camino desde un punto de entrada hasta un punto de salida en el laberinto. Este algoritmo explora de manera recursiva todas las direcciones posibles desde cualquier punto dado y utiliza la técnica de backtracking para retroceder si se encuentra con un obstáculo o un callejón sin salida.
 
